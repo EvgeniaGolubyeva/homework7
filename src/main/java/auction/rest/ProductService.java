@@ -47,8 +47,8 @@ public class ProductService {
 
     @GET
     @Path("/{id}")
-    public Response getProduct(@PathParam("id") int id) {
-        return Response.ok(database.getProductById(id)).build();
+    public Product getProduct(@PathParam("id") int id) {
+        return database.getProductById(id);
     }
 
     @GET
